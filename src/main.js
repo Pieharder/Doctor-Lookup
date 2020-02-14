@@ -14,7 +14,7 @@ function showDoctors(array) {
 
 
 $(document).ready(function() {
-  $("form#complaint").submit(function(event) {
+  $("form#complaintForm").submit(function(event) {
     event.preventDefault();
 
     const complaintInput = $("input#complaint").val();
