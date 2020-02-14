@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { DoctorFinder } from './doctor-service';
+import { DoctorFinder } from './DoctorLookup-service';
 
 
 
@@ -28,7 +28,7 @@ $(document).ready(function() {
       } else if (complaintResponse === false) {
         $("#output").text("It seems something has gone wrong, please wait a moment and try again.");
       } else 
-      showDoctors(complaintResponse)
+        showDoctors(complaintResponse);
     })();
   });
 });
