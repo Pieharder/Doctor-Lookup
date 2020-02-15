@@ -8,11 +8,11 @@ import { DoctorFinder } from './DoctorLookup-service';
 
 
 function showDoctors(doctorList) {
-  if (doctorList)
-    for (let i=0; i<doctorList.data.length; i++) {
-      $("ul#doctorOutput").append("<li>" + doctorList.data.profile.first_name + "</li>");
-      console.log(doctorList);
-    }
+  // if (doctorList)
+  for (let i=0; i<doctorList.data.length; i++) {
+    $("ul#doctorNameOutput").append("<li>" + "Dr " + doctorList.data[i].profile.first_name + " " + doctorList.data[i].profile.last_name + " MD " + "<br>" + doctorList.data[i].specialties[0]["name"] + "</li>");
+    console.log(doctorList.data[i]);
+  }
 }
 
 
