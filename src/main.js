@@ -7,11 +7,11 @@ import { DoctorFinder } from './DoctorLookup-service';
 
 
 
-function showDoctors(compResponse) {
-  if (compResponse)
-    for (let i=0; i<compResponse.data.length; i++) {
-      $("ul#doctorOutput").append("<li>" + compResponse[i] + "</li>");
-      console.log(compResponse);
+function showDoctors(doctorList) {
+  if (doctorList)
+    for (let i=0; i<doctorList.data.length; i++) {
+      $("ul#doctorOutput").append("<li>" + doctorList.data.profile.first_name + "</li>");
+      console.log(doctorList);
     }
 }
 
@@ -25,7 +25,6 @@ $(document).ready(function() {
     (async () => {
       let chiefComplaint = new DoctorFinder();
       let complaintResponse = await chiefComplaint.findDoctorByCC(complaintInput);
-      console.log(complaintResponse);
       console.log(complaintInput);
       if (complaintResponse.length === 0) {
         $("#output").text("Unfortunately there is nothing available in your area.");
