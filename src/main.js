@@ -9,7 +9,8 @@ import { DoctorFinder } from './DoctorLookup-service';
 
 function showDoctors(array) {
   for (let i=0; i<array.length; i++) {
-    $("#doctorOutput").append("<li>" + array[i] + "</li>");
+    $("ul#doctorOutput").append("<li>" + array[i].profile + "</li>");
+    console.log(array)
   }
 }
 
@@ -22,16 +23,20 @@ $(document).ready(function() {
     
     (async () => {
       let chiefComplaint = new DoctorFinder();
-      const complaintResponse = await chiefComplaint.findDoctorByCC(complaintInput);
+      let complaintResponse = await chiefComplaint.findDoctorByCC(complaintInput);
+      getElements(chiefComplaint);
+      console.log(complaintInput);
+      console.log(complaintResponse);
+    })();
 
-      console.log(complaintInput)
-      console.log(complaintResponse)
+
+    const getElements = function(complaintResponse) {
       if (complaintResponse.length === 0) {
         $("#output").text("Unfortunately there is nothing available in your area.");
       } else if (complaintResponse === false) {
         $("#output").text("It seems something has gone wrong, please wait a moment and try again.");
       } else 
         showDoctors(complaintResponse);
-    })();
+    };
   });
 });
