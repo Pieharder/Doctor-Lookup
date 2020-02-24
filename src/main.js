@@ -19,7 +19,7 @@ function showDoctors(doctorList) {
     } else {
       doctorAcceptPatients == "No";
     }
-    $("ul#doctorOutput").append("<li>" + "Dr " + doctorList.data[i].profile.first_name + " " + doctorList.data[i].profile.last_name + " MD " + "<br>" + doctorList.data[i].specialties[0]["name"] + "<br>" + "<strong>Clinic Name: </strong>" + doctorList.data[i].practices[0].name + "<br>" + "<strong>Accepting Patients: </strong>" + doctorAcceptPatients + "<br>" + "<strong>Phone: </strong>" + doctorList.data[i].practices[0].phones[0].number + "<br>" + "<strong>Address: </strong>" + doctorList.data[i].practices[0].visit_address.street + "<br>" + doctorList.data[i].practices[0].visit_address.city + ", " + doctorList.data[i].practices[0].visit_address.state + " " + doctorList.data[i].practices[0].visit_address.zip + "<br>" + "<strong>WebPage: </strong>" + doctorWebpage + "</li>");
+    $("ul#doctorOutput").append("<li>" + "Dr " + doctorList.data[i].profile.first_name + " " + doctorList.data[i].profile.last_name + " MD " + "<br>" + "<strong>Specialty: </strong>" + doctorList.data[i].specialties[0]["name"] + "<br>" + "<strong>Clinic Name: </strong>" + doctorList.data[i].practices[0].name + "<br>" + "<strong>Accepting Patients: </strong>" + doctorAcceptPatients + "<br>" + "<strong>Phone: </strong>" + doctorList.data[i].practices[0].phones[0].number + "<br>" + "<strong>Address: </strong>" + doctorList.data[i].practices[0].visit_address.street + "<br>" + doctorList.data[i].practices[0].visit_address.city + ", " + doctorList.data[i].practices[0].visit_address.state + " " + doctorList.data[i].practices[0].visit_address.zip + "<br>" + "<strong>WebPage: </strong>" + doctorWebpage + "</li>");
   }
 }
 
