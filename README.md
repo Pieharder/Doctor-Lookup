@@ -23,9 +23,10 @@ This project is was built with the purpose of taking user input in the form of m
 
 |   Behavior   |  Input  |  Output  |
 |:------------:|:-------:|:--------:|
-| Accept user input in the form of medical complaint and receive a list of local area specialists for treatment of that complaint. | COPD | Display list of Pulmonologists |
-|  |  |  |
-|  |  |  |
+| Accept user input in the form of medical complaint and receive a list of local area specialists with contact information for treatment of that complaint. | COPD | Display list of Pulmonologists|
+| Accept user input in the form of doctor by name and receive a list of local area doctors with the name inputted and their associated contact information. | John | Display a list of doctors with the first name John |
+| If user input does not yield any results, displays a message to user stating this. | Samus Aran | Unfortunately there is nothing available in your area. |
+| If an error occurs during making the API call, a message stating this is displayed to user. | Clicks submit | It seems something has gone wrong, please wait a moment and try again.|
 
 
 
