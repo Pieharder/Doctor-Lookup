@@ -17,7 +17,7 @@ This project is was built with the purpose of taking user input in the form of m
 * Create a .env file in the project directory by tpying "touch .env" in the terminal.
 * After all the above is completed, open the directory in Visual Studio Code by entering the command "code ." in the Terminal.
 * Access your newly created .env file in your Visual Studio Code and add the API key you created above in the following format "API_KEY =  Your Generated Key Here".
-*Start your development server by typing "npm run start".
+* Start your development server by typing "npm run start".
 
 ## Project Specifications
 
